@@ -1,6 +1,7 @@
-﻿using BlueLetterBibleWebCrawler.Operations;
+﻿using BlueLetterBibleCrawler.Operation;
 using OpenQA.Selenium.Chrome;
 using WebCrawler.Core.Service;
+using Bible.Data;
 
 namespace BlueLetterBibleCrawler
 {
@@ -8,24 +9,31 @@ namespace BlueLetterBibleCrawler
     {
         public static void Main(string[] args)
         {
-            var workflow = new WorkFlowBase();
+            var webCrawler = CreateWebCrawler();
+            var operationPipeline = new WebOperationPipeline(webCrawler);
+            operationPipeline.AddOperation(new SearchOperation("Love", BibleTranslation.KJV));
 
+            var fileName = "blb_concordance_love";
+            _ = new WorkFlow()
+                .AddPipeline(operationPipeline)
+                .Execute()
+                .OutputResults(new JsonFileWriter(), fileName + "json")
+
+            webCrawler.Dispose();
+        }
+
+        private static SeleniumWebCrawler CreateWebCrawler()
+        {
             var chromeOptions = new ChromeOptions();
             chromeOptions.AddArgument("--headless");
             chromeOptions.AddArgument("--disable-gpu");
 
-            using var blueLetterBibleWebDriver = new ChromeDriver(chromeOptions)
+            var webDriver = new ChromeDriver(chromeOptions)
             {
                 Url = "https://www.blueletterbible.org/"
             };
-            var blueLetterBibleWebCrawler = new SeleniumWebCrawler(blueLetterBibleWebDriver);
-            var blueLetterBibleWebOperationPipeline = new WebOperationPipeline(blueLetterBibleWebCrawler);
-            blueLetterBibleWebOperationPipeline.AddOperation(new SearchOperation("Love", Bible.Data.BibleTranslation.KJV));
-            var jsonFileWriter = new JsonFileWriter();
-            workflow
-                .AddPipeline(blueLetterBibleWebOperationPipeline)
-                .Execute()
-                .OutputResults(jsonFileWriter);
+
+            return new SeleniumWebCrawler(webDriver);
         }
     }
 }

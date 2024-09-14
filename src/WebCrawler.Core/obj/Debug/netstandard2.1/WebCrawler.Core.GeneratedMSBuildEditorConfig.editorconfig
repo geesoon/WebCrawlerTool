@@ -1,5 +1,5 @@
 is_global = true
 build_property.RootNamespace = WebCrawler.Core
-build_property.ProjectDir = C:\projects\web-crawler-tool\src\WebCrawler.Core\
+build_property.ProjectDir = C:\Projects\WebCrawlerTool\src\WebCrawler.Core\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -7,7 +7,6 @@ namespace WebCrawler.Core.Interface
     {
         public void AddOperation(IOperation operation);
         public void RemoveOperation(IOperation operation);
-        public void Execute();
-        public IEnumerable<object> GetResults();
+        public IEnumerable<object> Execute();
     }
 }

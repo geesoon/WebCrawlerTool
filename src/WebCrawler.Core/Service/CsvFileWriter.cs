@@ -6,11 +6,11 @@ namespace WebCrawler.Core.Service
 {
     public sealed class CsvFileWriter : IFileWriter
     {
-        public void WriteToFile(string path, object data)
+        public void WriteToFile(string path, IEnumerable<object> data)
         {
             using var writer = new StreamWriter(path);
             using var csv = new CsvWriter(writer, CultureInfo.InvariantCulture);
-            csv.WriteRecords((IEnumerable<dynamic>)data);
+            csv.WriteRecords(data);
         }
     }
 }

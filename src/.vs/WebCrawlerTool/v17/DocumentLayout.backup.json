@@ -1,10 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\projects\\web-crawler-tool\\src\\",
+  "WorkspaceRootPath": "C:\\Projects\\WebCrawlerTool\\src\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B1EA2288-43D6-421F-B49B-2CC43044C39F}|WebCrawler.Core\\WebCrawler.Core.csproj|c:\\projects\\web-crawler-tool\\src\\webcrawler.core\\service\\jsonfilewriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B1EA2288-43D6-421F-B49B-2CC43044C39F}|WebCrawler.Core\\WebCrawler.Core.csproj|c:\\projects\\webcrawlertool\\src\\webcrawler.core\\service\\jsonfilewriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B1EA2288-43D6-421F-B49B-2CC43044C39F}|WebCrawler.Core\\WebCrawler.Core.csproj|solutionrelative:webcrawler.core\\service\\jsonfilewriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1EA2288-43D6-421F-B49B-2CC43044C39F}|WebCrawler.Core\\WebCrawler.Core.csproj|c:\\projects\\webcrawlertool\\src\\webcrawler.core\\service\\workflow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1EA2288-43D6-421F-B49B-2CC43044C39F}|WebCrawler.Core\\WebCrawler.Core.csproj|solutionrelative:webcrawler.core\\service\\workflow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WorkFlow.cs",
+              "DocumentMoniker": "C:\\Projects\\WebCrawlerTool\\src\\WebCrawler.Core\\Service\\WorkFlow.cs",
+              "RelativeDocumentMoniker": "WebCrawler.Core\\Service\\WorkFlow.cs",
+              "ToolTip": "C:\\Projects\\WebCrawlerTool\\src\\WebCrawler.Core\\Service\\WorkFlow.cs",
+              "RelativeToolTip": "WebCrawler.Core\\Service\\WorkFlow.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAlwC4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-14T09:32:18.421Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "JsonFileWriter.cs",
-              "DocumentMoniker": "C:\\projects\\web-crawler-tool\\src\\WebCrawler.Core\\Service\\JsonFileWriter.cs",
+              "DocumentMoniker": "C:\\Projects\\WebCrawlerTool\\src\\WebCrawler.Core\\Service\\JsonFileWriter.cs",
               "RelativeDocumentMoniker": "WebCrawler.Core\\Service\\JsonFileWriter.cs",
-              "ToolTip": "C:\\projects\\web-crawler-tool\\src\\WebCrawler.Core\\Service\\JsonFileWriter.cs",
+              "ToolTip": "C:\\Projects\\WebCrawlerTool\\src\\WebCrawler.Core\\Service\\JsonFileWriter.cs",
               "RelativeToolTip": "WebCrawler.Core\\Service\\JsonFileWriter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T04:45:51.598Z",
+              "WhenOpened": "2024-09-14T09:31:46.772Z",
               "EditorCaption": ""
             }
           ]

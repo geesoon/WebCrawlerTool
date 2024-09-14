@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\projects\\web-crawler-tool\\src\\Bible.Data\\Bible.Data.csproj": {}
+    "C:\\Projects\\WebCrawlerTool\\src\\Bible.Data\\Bible.Data.csproj": {}
   },
   "projects": {
-    "C:\\projects\\web-crawler-tool\\src\\Bible.Data\\Bible.Data.csproj": {
+    "C:\\Projects\\WebCrawlerTool\\src\\Bible.Data\\Bible.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\projects\\web-crawler-tool\\src\\Bible.Data\\Bible.Data.csproj",
+        "projectUniqueName": "C:\\Projects\\WebCrawlerTool\\src\\Bible.Data\\Bible.Data.csproj",
         "projectName": "Bible.Data",
-        "projectPath": "C:\\projects\\web-crawler-tool\\src\\Bible.Data\\Bible.Data.csproj",
+        "projectPath": "C:\\Projects\\WebCrawlerTool\\src\\Bible.Data\\Bible.Data.csproj",
         "packagesPath": "C:\\Users\\geesoon\\.nuget\\packages\\",
-        "outputPath": "C:\\projects\\web-crawler-tool\\src\\Bible.Data\\obj\\",
+        "outputPath": "C:\\Projects\\WebCrawlerTool\\src\\Bible.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\geesoon\\AppData\\Roaming\\NuGet\\NuGet.Config",

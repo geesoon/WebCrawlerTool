@@ -28,31 +28,15 @@
           }
         }
       },
-      "Newtonsoft.Json/13.0.1": {
+      "Selenium.WebDriver/4.24.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+          "lib/net8.0/WebDriver.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Selenium.WebDriver/4.21.0": {
-        "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "13.0.1"
-        },
-        "compile": {
-          "lib/netstandard2.0/WebDriver.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/WebDriver.dll": {
+          "lib/net8.0/WebDriver.dll": {
             "related": ".xml"
           }
         },
@@ -120,7 +104,7 @@
         "dependencies": {
           "CsvHelper": "32.0.3",
           "Ensure.That": "10.1.0",
-          "Selenium.WebDriver": "4.21.0",
+          "Selenium.WebDriver": "4.24.0",
           "System.Text.Json": "8.0.4"
         },
         "compile": {
@@ -180,37 +164,10 @@
         "lib/netstandard2.1/Ensure.That.xml"
       ]
     },
-    "Newtonsoft.Json/13.0.1": {
-      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+    "Selenium.WebDriver/4.24.0": {
+      "sha512": "pwpNZQPCtDFH07nCliNMT/YRR5NhlPmxsrh/9e7PQsI/TfSUBy/VEdA6QwDY2WybzVZ6SlYSu1bv3cWKkiN8/w==",
       "type": "package",
-      "path": "newtonsoft.json/13.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.md",
-        "lib/net20/Newtonsoft.Json.dll",
-        "lib/net20/Newtonsoft.Json.xml",
-        "lib/net35/Newtonsoft.Json.dll",
-        "lib/net35/Newtonsoft.Json.xml",
-        "lib/net40/Newtonsoft.Json.dll",
-        "lib/net40/Newtonsoft.Json.xml",
-        "lib/net45/Newtonsoft.Json.dll",
-        "lib/net45/Newtonsoft.Json.xml",
-        "lib/netstandard1.0/Newtonsoft.Json.dll",
-        "lib/netstandard1.0/Newtonsoft.Json.xml",
-        "lib/netstandard1.3/Newtonsoft.Json.dll",
-        "lib/netstandard1.3/Newtonsoft.Json.xml",
-        "lib/netstandard2.0/Newtonsoft.Json.dll",
-        "lib/netstandard2.0/Newtonsoft.Json.xml",
-        "newtonsoft.json.13.0.1.nupkg.sha512",
-        "newtonsoft.json.nuspec",
-        "packageIcon.png"
-      ]
-    },
-    "Selenium.WebDriver/4.21.0": {
-      "sha512": "3xIx4CJunIoLEOROfDKILIzf76WfphTpQJYE98stG1GBVBKhFO5E6wXNfCqdiWt34iNlckcDr3z+qCD+RPfuUQ==",
-      "type": "package",
-      "path": "selenium.webdriver/4.21.0",
+      "path": "selenium.webdriver/4.24.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -218,12 +175,14 @@
         "build/Selenium.WebDriver.targets",
         "buildTransitive/Selenium.WebDriver.targets",
         "icon.png",
+        "lib/net8.0/WebDriver.dll",
+        "lib/net8.0/WebDriver.xml",
         "lib/netstandard2.0/WebDriver.dll",
         "lib/netstandard2.0/WebDriver.xml",
         "manager/linux/selenium-manager",
         "manager/macos/selenium-manager",
         "manager/windows/selenium-manager.exe",
-        "selenium.webdriver.4.21.0.nupkg.sha512",
+        "selenium.webdriver.4.24.0.nupkg.sha512",
         "selenium.webdriver.nuspec"
       ]
     },
@@ -359,11 +318,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\projects\\web-crawler-tool\\src\\BlueLetterBibleCrawler\\BlueLetterBibleCrawler.csproj",
+      "projectUniqueName": "C:\\Projects\\WebCrawlerTool\\src\\BlueLetterBibleCrawler\\BlueLetterBibleCrawler.csproj",
       "projectName": "BlueLetterBibleCrawler",
-      "projectPath": "C:\\projects\\web-crawler-tool\\src\\BlueLetterBibleCrawler\\BlueLetterBibleCrawler.csproj",
+      "projectPath": "C:\\Projects\\WebCrawlerTool\\src\\BlueLetterBibleCrawler\\BlueLetterBibleCrawler.csproj",
       "packagesPath": "C:\\Users\\geesoon\\.nuget\\packages\\",
-      "outputPath": "C:\\projects\\web-crawler-tool\\src\\BlueLetterBibleCrawler\\obj\\",
+      "outputPath": "C:\\Projects\\WebCrawlerTool\\src\\BlueLetterBibleCrawler\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\geesoon\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -381,11 +340,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\projects\\web-crawler-tool\\src\\Bible.Data\\Bible.Data.csproj": {
-              "projectPath": "C:\\projects\\web-crawler-tool\\src\\Bible.Data\\Bible.Data.csproj"
+            "C:\\Projects\\WebCrawlerTool\\src\\Bible.Data\\Bible.Data.csproj": {
+              "projectPath": "C:\\Projects\\WebCrawlerTool\\src\\Bible.Data\\Bible.Data.csproj"
             },
-            "C:\\projects\\web-crawler-tool\\src\\WebCrawler.Core\\WebCrawler.Core.csproj": {
-              "projectPath": "C:\\projects\\web-crawler-tool\\src\\WebCrawler.Core\\WebCrawler.Core.csproj"
+            "C:\\Projects\\WebCrawlerTool\\src\\WebCrawler.Core\\WebCrawler.Core.csproj": {
+              "projectPath": "C:\\Projects\\WebCrawlerTool\\src\\WebCrawler.Core\\WebCrawler.Core.csproj"
             }
           }
         }
