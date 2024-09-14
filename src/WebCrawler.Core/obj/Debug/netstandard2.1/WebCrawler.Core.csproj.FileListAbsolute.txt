@@ -1,0 +1,14 @@
+C:\projects\web-crawler-tool\src\WebCrawler.Core\obj\Debug\netstandard2.1\WebCrawler.Core.csproj.AssemblyReference.cache
+C:\projects\web-crawler-tool\src\WebCrawler.Core\obj\Debug\netstandard2.1\WebCrawler.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\projects\web-crawler-tool\src\WebCrawler.Core\obj\Debug\netstandard2.1\WebCrawler.Core.AssemblyInfoInputs.cache
+C:\projects\web-crawler-tool\src\WebCrawler.Core\obj\Debug\netstandard2.1\WebCrawler.Core.AssemblyInfo.cs
+C:\projects\web-crawler-tool\src\WebCrawler.Core\obj\Debug\netstandard2.1\WebCrawler.Core.csproj.CoreCompileInputs.cache
+C:\projects\web-crawler-tool\src\WebCrawler.Core\obj\Debug\netstandard2.1\WebCrawler.Core.sourcelink.json
+C:\projects\web-crawler-tool\src\WebCrawler.Core\bin\Debug\netstandard2.1\selenium-manager\linux\selenium-manager
+C:\projects\web-crawler-tool\src\WebCrawler.Core\bin\Debug\netstandard2.1\selenium-manager\macos\selenium-manager
+C:\projects\web-crawler-tool\src\WebCrawler.Core\bin\Debug\netstandard2.1\selenium-manager\windows\selenium-manager.exe
+C:\projects\web-crawler-tool\src\WebCrawler.Core\bin\Debug\netstandard2.1\WebCrawler.Core.deps.json
+C:\projects\web-crawler-tool\src\WebCrawler.Core\bin\Debug\netstandard2.1\WebCrawler.Core.dll
+C:\projects\web-crawler-tool\src\WebCrawler.Core\bin\Debug\netstandard2.1\WebCrawler.Core.pdb
+C:\projects\web-crawler-tool\src\WebCrawler.Core\obj\Debug\netstandard2.1\WebCrawler.Core.dll
+C:\projects\web-crawler-tool\src\WebCrawler.Core\obj\Debug\netstandard2.1\WebCrawler.Core.pdb
