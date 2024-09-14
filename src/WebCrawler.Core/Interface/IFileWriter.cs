@@ -2,6 +2,6 @@ namespace WebCrawler.Core.Interface
 {
     public interface IFileWriter
     {
-        void WriteToFile(string path, object data);
+        void WriteToFile(string path, IEnumerable<object> data);
     }
 }

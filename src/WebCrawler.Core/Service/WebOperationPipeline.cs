@@ -5,52 +5,41 @@ namespace WebCrawler.Core.Service
 {
     public sealed class WebOperationPipeline : IWebOperationPipeline
     {
-        public IEnumerable<IOperation> Operations { get; set; } = Enumerable.Empty<IOperation>();
-        public IWebCrawler WebCrawler { get; set; }
-        private IEnumerable<object> results = Enumerable.Empty<object>();
+        private readonly IWebCrawler webCrawler;
+        private IEnumerable<IOperation> operations = [];
 
-        public WebOperationPipeline(IWebCrawler webCrawler)
+        public WebOperationPipeline(IWebCrawler webCrawler, IEnumerable<IOperation> operations = null)
         {
-            this.WebCrawler = EnsureArg.IsNotNull(webCrawler, nameof(webCrawler));
+            this.webCrawler = EnsureArg.IsNotNull(webCrawler, nameof(webCrawler));
+            if (operations is not null)
+            {
+                this.operations = operations;
+            }
         }
 
         public void AddOperation(IOperation operation)
         {
-            if (!this.Operations.Contains(operation))
+            if (!this.operations.Contains(operation))
             {
-                this.Operations = this.Operations.Append(operation);
+                this.operations = this.operations.Append(operation);
             }
         }
 
         public void RemoveOperation(IOperation operation)
         {
-            var operations = this.Operations.ToList();
-            if (operations.Remove(operation))
-                this.Operations = operations;
+            this.operations = this.operations.Where(x => x != operation);
         }
 
-        public void Execute()
+        public IEnumerable<object> Execute()
         {
+            var results = Enumerable.Empty<object>();
             object nextInput = null;
-            foreach (var operation in this.Operations)
+            foreach (var operation in this.operations)
             {
-                try
-                {
-                    nextInput = operation.Operate(this.WebCrawler, nextInput);
-                    this.results = this.results.Append(nextInput);
-                }
-                catch (Exception ex)
-                {
-                    // Blanket catch to make sure the pipeline able to continue.
-                    Console.WriteLine(ex.ToString());
-                    nextInput = null;
-                }
+                nextInput = operation.Operate(this.webCrawler, nextInput);
+                results = results.Append(nextInput);
             }
-        }
-
-        public IEnumerable<object> GetResults()
-        {
-            return this.results;
+            return results;
         }
     }
 }

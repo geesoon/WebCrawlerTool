@@ -1,4 +1,5 @@
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using WebCrawler.Core.Interface;
 
 namespace WebCrawler.Core.Service
@@ -13,12 +14,15 @@ namespace WebCrawler.Core.Service
                 Directory.CreateDirectory(directory);
             }
 
-            using (var fileStream = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.None))
-            using (var streamWriter = new StreamWriter(fileStream))
+            using var fileStream = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.None);
+            using var streamWriter = new StreamWriter(fileStream);
+            var options = new JsonSerializerOptions
             {
-                var jsonString = JsonSerializer.Serialize(data);
-                streamWriter.WriteLine(jsonString);
-            }
+                Converters = { new JsonStringEnumConverter() },
+                WriteIndented = true
+            };
+            var jsonString = JsonSerializer.Serialize(data, options);
+            streamWriter.WriteLine(jsonString);
         }
     }
 }

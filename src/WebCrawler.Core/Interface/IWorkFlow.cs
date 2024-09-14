@@ -8,6 +8,6 @@ namespace WebCrawler.Core.Interface
         public IWorkFlow AddPipeline(IWebOperationPipeline pipeline);
         public IWorkFlow RemovePipeline(IWebOperationPipeline pipeline);
         public IWorkFlow Execute();
-        public IWorkFlow OutputResults(IFileWriter fileWriter);
+        public IWorkFlow OutputResults(IFileWriter fileWriter, string fileName);
     }
 }

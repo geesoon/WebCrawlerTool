@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BlueLetterBibleCrawler
-build_property.ProjectDir = C:\projects\web-crawler-tool\src\BlueLetterBibleCrawler\
+build_property.ProjectDir = C:\Projects\WebCrawlerTool\src\BlueLetterBibleCrawler\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

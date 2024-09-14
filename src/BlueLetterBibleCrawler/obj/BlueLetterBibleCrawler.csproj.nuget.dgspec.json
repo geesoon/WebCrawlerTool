@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\projects\\web-crawler-tool\\src\\BlueLetterBibleCrawler\\BlueLetterBibleCrawler.csproj": {}
+    "C:\\Projects\\WebCrawlerTool\\src\\BlueLetterBibleCrawler\\BlueLetterBibleCrawler.csproj": {}
   },
   "projects": {
-    "C:\\projects\\web-crawler-tool\\src\\Bible.Data\\Bible.Data.csproj": {
+    "C:\\Projects\\WebCrawlerTool\\src\\Bible.Data\\Bible.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\projects\\web-crawler-tool\\src\\Bible.Data\\Bible.Data.csproj",
+        "projectUniqueName": "C:\\Projects\\WebCrawlerTool\\src\\Bible.Data\\Bible.Data.csproj",
         "projectName": "Bible.Data",
-        "projectPath": "C:\\projects\\web-crawler-tool\\src\\Bible.Data\\Bible.Data.csproj",
+        "projectPath": "C:\\Projects\\WebCrawlerTool\\src\\Bible.Data\\Bible.Data.csproj",
         "packagesPath": "C:\\Users\\geesoon\\.nuget\\packages\\",
-        "outputPath": "C:\\projects\\web-crawler-tool\\src\\Bible.Data\\obj\\",
+        "outputPath": "C:\\Projects\\WebCrawlerTool\\src\\Bible.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\geesoon\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -71,14 +71,14 @@
         }
       }
     },
-    "C:\\projects\\web-crawler-tool\\src\\BlueLetterBibleCrawler\\BlueLetterBibleCrawler.csproj": {
+    "C:\\Projects\\WebCrawlerTool\\src\\BlueLetterBibleCrawler\\BlueLetterBibleCrawler.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\projects\\web-crawler-tool\\src\\BlueLetterBibleCrawler\\BlueLetterBibleCrawler.csproj",
+        "projectUniqueName": "C:\\Projects\\WebCrawlerTool\\src\\BlueLetterBibleCrawler\\BlueLetterBibleCrawler.csproj",
         "projectName": "BlueLetterBibleCrawler",
-        "projectPath": "C:\\projects\\web-crawler-tool\\src\\BlueLetterBibleCrawler\\BlueLetterBibleCrawler.csproj",
+        "projectPath": "C:\\Projects\\WebCrawlerTool\\src\\BlueLetterBibleCrawler\\BlueLetterBibleCrawler.csproj",
         "packagesPath": "C:\\Users\\geesoon\\.nuget\\packages\\",
-        "outputPath": "C:\\projects\\web-crawler-tool\\src\\BlueLetterBibleCrawler\\obj\\",
+        "outputPath": "C:\\Projects\\WebCrawlerTool\\src\\BlueLetterBibleCrawler\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\geesoon\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -96,11 +96,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\projects\\web-crawler-tool\\src\\Bible.Data\\Bible.Data.csproj": {
-                "projectPath": "C:\\projects\\web-crawler-tool\\src\\Bible.Data\\Bible.Data.csproj"
+              "C:\\Projects\\WebCrawlerTool\\src\\Bible.Data\\Bible.Data.csproj": {
+                "projectPath": "C:\\Projects\\WebCrawlerTool\\src\\Bible.Data\\Bible.Data.csproj"
               },
-              "C:\\projects\\web-crawler-tool\\src\\WebCrawler.Core\\WebCrawler.Core.csproj": {
-                "projectPath": "C:\\projects\\web-crawler-tool\\src\\WebCrawler.Core\\WebCrawler.Core.csproj"
+              "C:\\Projects\\WebCrawlerTool\\src\\WebCrawler.Core\\WebCrawler.Core.csproj": {
+                "projectPath": "C:\\Projects\\WebCrawlerTool\\src\\WebCrawler.Core\\WebCrawler.Core.csproj"
               }
             }
           }
@@ -145,14 +145,14 @@
         }
       }
     },
-    "C:\\projects\\web-crawler-tool\\src\\WebCrawler.Core\\WebCrawler.Core.csproj": {
+    "C:\\Projects\\WebCrawlerTool\\src\\WebCrawler.Core\\WebCrawler.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\projects\\web-crawler-tool\\src\\WebCrawler.Core\\WebCrawler.Core.csproj",
+        "projectUniqueName": "C:\\Projects\\WebCrawlerTool\\src\\WebCrawler.Core\\WebCrawler.Core.csproj",
         "projectName": "WebCrawler.Core",
-        "projectPath": "C:\\projects\\web-crawler-tool\\src\\WebCrawler.Core\\WebCrawler.Core.csproj",
+        "projectPath": "C:\\Projects\\WebCrawlerTool\\src\\WebCrawler.Core\\WebCrawler.Core.csproj",
         "packagesPath": "C:\\Users\\geesoon\\.nuget\\packages\\",
-        "outputPath": "C:\\projects\\web-crawler-tool\\src\\WebCrawler.Core\\obj\\",
+        "outputPath": "C:\\Projects\\WebCrawlerTool\\src\\WebCrawler.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\geesoon\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -197,7 +197,7 @@
             },
             "Selenium.WebDriver": {
               "target": "Package",
-              "version": "[4.21.0, )"
+              "version": "[4.24.0, )"
             },
             "System.Text.Json": {
               "target": "Package",

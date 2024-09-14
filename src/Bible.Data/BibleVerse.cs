@@ -38,10 +38,10 @@ namespace Bible.Data
 
                 var bookPart = reference.Substring(0, spaceIndex);
                 var chapterVersePart = reference.Substring(spaceIndex + 1);
-
-                if (!Enum.TryParse(bookPart.Replace(" ", ""), true, out BibleBooks book))
+                bookPart.Replace(" ", "");
+                if (!Enum.TryParse(bookPart, true, out BibleBooks book))
                 {
-                    throw new ArgumentException("Not able to parse book reference part into proper BibleBooks.");
+                    book = BibleBooksExtensions.GetEnumFromAbbreviation(bookPart);
                 }
 
                 try
@@ -78,7 +78,7 @@ namespace Bible.Data
             }
             catch (Exception ex)
             {
-                throw new ArgumentException($"The bible reference is not properly formatted. Reason: {ex.Message}");
+                throw new ArgumentException($"The bible reference ({reference}) is not properly formatted. Reason: {ex.Message}");
             }
         }
 
