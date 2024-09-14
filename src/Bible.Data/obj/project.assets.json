@@ -1,0 +1,121 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "EnsureThat/1.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net451/EnsureThat.dll": {}
+        },
+        "runtime": {
+          "lib/net451/EnsureThat.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EnsureThat/1.0.1": {
+      "sha512": "vmOkqrCskmYHMM+DNILpCj+9nQZjidT9QqczSpRV00o3Sl3uV63VBiDrw6i8G/lvHv1ZnVFVpDRDkIt0wzSulw==",
+      "type": "package",
+      "path": "ensurethat/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ensurethat.1.0.1.nupkg.sha512",
+        "ensurethat.nuspec",
+        "lib/net45/EnsureThat.dll",
+        "lib/net451/EnsureThat.dll",
+        "lib/netcore45/EnsureThat.dll",
+        "lib/netcore451/EnsureThat.dll",
+        "lib/wp8/EnsureThat.dll"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "EnsureThat >= 1.0.1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\geesoon\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\projects\\web-crawler-tool\\src\\Bible.Data\\Bible.Data.csproj",
+      "projectName": "Bible.Data",
+      "projectPath": "C:\\projects\\web-crawler-tool\\src\\Bible.Data\\Bible.Data.csproj",
+      "packagesPath": "C:\\Users\\geesoon\\.nuget\\packages\\",
+      "outputPath": "C:\\projects\\web-crawler-tool\\src\\Bible.Data\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\geesoon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "dependencies": {
+          "EnsureThat": {
+            "target": "Package",
+            "version": "[1.0.1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'EnsureThat 1.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "EnsureThat",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+C:\projects\web-crawler-tool\src\Bible.Data\obj\Debug\net8.0\Bible.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\projects\web-crawler-tool\src\Bible.Data\obj\Debug\net8.0\Bible.Data.AssemblyInfoInputs.cache
+C:\projects\web-crawler-tool\src\Bible.Data\obj\Debug\net8.0\Bible.Data.AssemblyInfo.cs
+C:\projects\web-crawler-tool\src\Bible.Data\obj\Debug\net8.0\Bible.Data.csproj.CoreCompileInputs.cache
+C:\projects\web-crawler-tool\src\Bible.Data\obj\Debug\net8.0\Bible.Data.sourcelink.json
+C:\projects\web-crawler-tool\src\Bible.Data\obj\Debug\net8.0\Bible.Data.csproj.AssemblyReference.cache

@@ -1,0 +1,7 @@
+{
+  "WebCrawlerOptions": {
+    "WebDriver": {
+      "Url": "https://www.blueletterbible.org/"
+    }
+  }
+}

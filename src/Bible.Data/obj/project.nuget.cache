@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "a7FtGgY/Ccw=",
+  "success": true,
+  "projectFilePath": "C:\\projects\\web-crawler-tool\\src\\Bible.Data\\Bible.Data.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\geesoon\\.nuget\\packages\\ensurethat\\1.0.1\\ensurethat.1.0.1.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'EnsureThat 1.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "EnsureThat",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}

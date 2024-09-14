@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCrawler.Core", "WebCrawler.Core\WebCrawler.Core.csproj", "{B1EA2288-43D6-421F-B49B-2CC43044C39F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bible.Data", "Bible.Data\Bible.Data.csproj", "{44108F60-7F46-43FC-87AB-26E5CE738688}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueLetterBibleCrawler", "BlueLetterBibleCrawler\BlueLetterBibleCrawler.csproj", "{6F9D1590-4960-41BD-A30D-5C24E27BE8E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1EA2288-43D6-421F-B49B-2CC43044C39F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1EA2288-43D6-421F-B49B-2CC43044C39F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1EA2288-43D6-421F-B49B-2CC43044C39F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1EA2288-43D6-421F-B49B-2CC43044C39F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44108F60-7F46-43FC-87AB-26E5CE738688}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44108F60-7F46-43FC-87AB-26E5CE738688}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44108F60-7F46-43FC-87AB-26E5CE738688}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44108F60-7F46-43FC-87AB-26E5CE738688}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F9D1590-4960-41BD-A30D-5C24E27BE8E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F9D1590-4960-41BD-A30D-5C24E27BE8E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F9D1590-4960-41BD-A30D-5C24E27BE8E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F9D1590-4960-41BD-A30D-5C24E27BE8E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
