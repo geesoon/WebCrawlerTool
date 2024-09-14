@@ -56,7 +56,7 @@ namespace Bible.Data
             }
         }
 
-        public BibleReference(BibleVerse From, BibleVerse? To)
+        public BibleReference(BibleVerse From, BibleVerse To)
         {
             this.FromVerse = From;
 

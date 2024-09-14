@@ -1,10 +1,10 @@
-using WebCrawler.Core.Interfaces;
-using WebCrawler.Core.Model;
-using WebCrawler.Core.Services;
+using Bible.Data;
 using EnsureThat;
 using OpenQA.Selenium;
+using WebCrawler.Core.Interface;
+using WebCrawler.Core.Service;
 
-namespace BlueLetterBibleWebCrawler.Operations
+namespace BlueLetterBibleCrawler.Operations
 {
     public sealed class SearchOperation : WebOperationBase<IEnumerable<BibleVerse>, string>
     {
@@ -12,17 +12,18 @@ namespace BlueLetterBibleWebCrawler.Operations
         private readonly By By = By.CssSelector(".scriptureText");
         private readonly string Criteria;
         private readonly BibleTranslation Translation;
+
         public SearchOperation(string criteria, BibleTranslation translation)
         {
-            this.Criteria = EnsureArg.IsNotNull(criteria, nameof(criteria));
-            this.Translation = translation;
+            Criteria = EnsureArg.IsNotNull(criteria, nameof(criteria));
+            Translation = translation;
         }
 
         public override IEnumerable<BibleVerse> Operate(IWebCrawler webCrawler, string context)
         {
-            webCrawler.BrowseUrl($"{this.SearchUrl}?Criteria={this.Criteria}&t={this.Translation}");
+            webCrawler.BrowseUrl($"{SearchUrl}?Criteria={Criteria}&t={Translation}");
             var result = webCrawler
-                .FindElements(this.By)
+                .FindElements(By)
                 .ToList();
 
             IEnumerable<BibleVerse> bibleVerses = [];
@@ -44,7 +45,7 @@ namespace BlueLetterBibleWebCrawler.Operations
                 }
                 catch (ArgumentException ex)
                 {
-                    Console.WriteLine($"{reference}");
+                    Console.WriteLine($"{reference}, {ex.ToString()}");
                 }
             }
             return bibleVerses;

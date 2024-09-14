@@ -1,7 +1,7 @@
-namespace BlueLetterBibleWebCrawler.Model
+namespace BlueLetterBibleCrawler.Model
 {
     public sealed class SearchTerm
     {
-        public string searchInput { get; set; }
+        public string SearchInput { get; set; }
     }
 }

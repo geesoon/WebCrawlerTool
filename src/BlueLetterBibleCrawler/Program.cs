@@ -1,6 +1,8 @@
-﻿using OpenQA.Selenium.Chrome;
+﻿using BlueLetterBibleWebCrawler.Operations;
+using OpenQA.Selenium.Chrome;
+using WebCrawler.Core.Service;
 
-namespace BlueLetterBibleWebCrawler
+namespace BlueLetterBibleCrawler
 {
     public static class Program
     {
@@ -18,7 +20,7 @@ namespace BlueLetterBibleWebCrawler
             };
             var blueLetterBibleWebCrawler = new SeleniumWebCrawler(blueLetterBibleWebDriver);
             var blueLetterBibleWebOperationPipeline = new WebOperationPipeline(blueLetterBibleWebCrawler);
-            blueLetterBibleWebOperationPipeline.AddOperation(new SearchOperation("Love", BlueLetterBible.Model.BibleTranslation.KJV));
+            blueLetterBibleWebOperationPipeline.AddOperation(new SearchOperation("Love", Bible.Data.BibleTranslation.KJV));
             var jsonFileWriter = new JsonFileWriter();
             workflow
                 .AddPipeline(blueLetterBibleWebOperationPipeline)
