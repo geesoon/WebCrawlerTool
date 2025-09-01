@@ -1,4 +1,5 @@
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using EnsureThat;
 using WebCrawler.Core.Interface;
 
@@ -7,11 +8,13 @@ namespace WebCrawler.Core.Service
     public sealed class SeleniumWebCrawler : IWebCrawler, IDisposable
     {
         private readonly IWebDriver webDriver;
+        private readonly WebDriverWait defaultWait;
         private bool isDisposed;
 
-        public SeleniumWebCrawler(IWebDriver webDriver)
+        public SeleniumWebCrawler(IWebDriver webDriver, int defaultTimeoutSeconds = 10)
         {
             this.webDriver = EnsureArg.IsNotNull(webDriver, nameof(webDriver));
+            this.defaultWait = new WebDriverWait(this.webDriver, TimeSpan.FromSeconds(defaultTimeoutSeconds));
         }
 
         public void Dispose()
@@ -31,10 +34,18 @@ namespace WebCrawler.Core.Service
             return this.webDriver.FindElements(by);
         }
 
-        public void BrowseUrl(string Url)
+        /// <summary>
+        /// Navigates to a URL and optionally waits for a condition.
+        /// </summary>
+        /// <param name="url">The target URL.</param>
+        public void BrowseUrl(string url)
         {
-            EnsureArg.IsNotNullOrWhiteSpace(Url, nameof(Url));
-            this.webDriver.Url = Url;
+            EnsureArg.IsNotNullOrWhiteSpace(url, nameof(url));
+            this.webDriver.Url = url;
+
+            // Always wait until document.readyState == complete
+            this.defaultWait.Until(driver =>
+                ((IJavaScriptExecutor)driver).ExecuteScript("return document.readyState").Equals("complete"));
         }
     }
 }

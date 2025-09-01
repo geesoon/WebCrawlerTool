@@ -26,8 +26,8 @@ namespace Bible.Data
 
         public BibleVerse(string reference, string text)
         {
-            EnsureArg.IsNotNull(reference, nameof(reference));
-            this.Text = EnsureArg.IsNotNullOrEmpty(text, nameof(text));
+            EnsureArg.IsNotNullOrWhiteSpace(reference, nameof(reference));
+            this.Text = EnsureArg.IsNotNullOrWhiteSpace(text, nameof(text));
             try
             {
                 var spaceIndex = reference.LastIndexOf(' ');

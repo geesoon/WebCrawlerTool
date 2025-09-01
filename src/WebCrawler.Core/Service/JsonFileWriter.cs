@@ -6,7 +6,7 @@ namespace WebCrawler.Core.Service
 {
     public sealed class JsonFileWriter : IFileWriter
     {
-        private readonly JsonSerializerOptions _jsonSerializerOptions = new JsonSerializerOptions
+        private readonly JsonSerializerOptions _jsonSerializerOptions = new()
         {
             Converters =
             {

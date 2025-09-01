@@ -1,7 +1,6 @@
 ﻿using BlueLetterBibleCrawler.Operation;
 using OpenQA.Selenium.Chrome;
 using WebCrawler.Core.Service;
-using Bible.Data;
 
 namespace BlueLetterBibleCrawler
 {
@@ -25,13 +24,16 @@ namespace BlueLetterBibleCrawler
         {
             var webCrawler = CreateWebCrawler();
             var operationPipeline = new WebOperationPipeline(webCrawler);
-            operationPipeline.AddOperation(new SearchOperation("Love", BibleTranslation.KJV));
+            operationPipeline.AddOperation(new SearchOperation("love", "ESV"));
+            operationPipeline.AddOperation(new SearchOperation("soldier", "ESV"));
+            operationPipeline.AddOperation(new SearchOperation("soldier of God", "ESV"));
+            operationPipeline.AddOperation(new SearchOperation("confidence", "ESV"));
 
             var workflow = new WorkFlow()
                 .AddPipeline(operationPipeline)
                 .Execute();
 
-            await workflow.OutputResultsAsync(new JsonFileWriter(), "blb_concordance_love.json");
+            await workflow.OutputResultsAsync(new JsonFileWriter(), "blb_concordance_search_results.json");
             webCrawler.Dispose();
         }
     }
