@@ -13,13 +13,15 @@ namespace BlueLetterBibleCrawler.Operation
         private readonly string Criteria;
         private readonly BibleTranslation Translation;
 
-        public SearchOperation(string criteria, BibleTranslation translation)
+        public SearchOperation(
+            string criteria,
+            BibleTranslation translation)
         {
             this.Criteria = EnsureArg.IsNotNull(criteria, nameof(criteria));
             this.Translation = translation;
         }
 
-        public override List<BibleVerse> Operate(IWebCrawler webCrawler, string context)
+        protected override List<BibleVerse> Operate(IWebCrawler webCrawler, string context)
         {
             webCrawler.BrowseUrl($"{SearchUrl}?Criteria={Criteria}&t={Translation}");
             var allSearchResults = webCrawler.FindElements(By);
@@ -33,7 +35,7 @@ namespace BlueLetterBibleCrawler.Operation
                 bibleVerses = bibleVerses.Append(bibleVerse);
             }
 
-            return bibleVerses.ToList();
+            return [.. bibleVerses];
 
             static string ExtractReferenceFromElement(IWebElement element)
             {

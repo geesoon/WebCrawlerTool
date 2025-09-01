@@ -4,7 +4,7 @@ namespace WebCrawler.Core.Service
 {
     public abstract class WebOperationBase<TOutput, TContext> : IWebOperation<TOutput, TContext>
     {
-        public abstract TOutput Operate(IWebCrawler webCrawler, TContext context);
+        protected abstract TOutput Operate(IWebCrawler webCrawler, TContext context);
 
         public object Operate(IWebCrawler webCrawler, dynamic input)
         {

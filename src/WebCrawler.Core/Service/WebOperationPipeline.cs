@@ -1,3 +1,4 @@
+using System.Collections.Concurrent;
 using EnsureThat;
 using WebCrawler.Core.Interface;
 
@@ -6,37 +7,32 @@ namespace WebCrawler.Core.Service
     public sealed class WebOperationPipeline : IWebOperationPipeline
     {
         private readonly IWebCrawler webCrawler;
-        private IEnumerable<IOperation> operations = [];
+        private readonly ConcurrentDictionary<IOperation, IEnumerable<object>> operations = [];
 
-        public WebOperationPipeline(IWebCrawler webCrawler, IEnumerable<IOperation> operations = null)
+        public WebOperationPipeline(IWebCrawler webCrawler)
         {
             this.webCrawler = EnsureArg.IsNotNull(webCrawler, nameof(webCrawler));
-            if (operations is not null)
-            {
-                this.operations = operations;
-            }
         }
 
         public void AddOperation(IOperation operation)
         {
-            if (!this.operations.Contains(operation))
-            {
-                this.operations = this.operations.Append(operation);
-            }
+            EnsureArg.IsNotNull(operation, nameof(operation));
+            this.operations.TryAdd(operation, null);
         }
 
         public void RemoveOperation(IOperation operation)
         {
-            this.operations = this.operations.Where(x => x != operation);
+            EnsureArg.IsNotNull(operation, nameof(operation));
+            this.operations.TryRemove(operation, out var operations);
         }
 
         public IEnumerable<object> Execute()
         {
             var results = Enumerable.Empty<object>();
             object nextInput = null;
-            foreach (var operation in this.operations)
+            foreach (var keyValuePair in this.operations)
             {
-                nextInput = operation.Operate(this.webCrawler, nextInput);
+                nextInput = keyValuePair.Key.Operate(this.webCrawler, nextInput);
                 results = results.Append(nextInput);
             }
             return results;
