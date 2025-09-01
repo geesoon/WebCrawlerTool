@@ -1,7 +1,7 @@
 namespace WebCrawler.Core.Interface
 {
-    public interface IWebOperation<TOutput, in TContext> : IOperation
+    public interface IWebOperation
     {
-        TOutput Operate(IWebCrawler webCrawler, TContext context);
+        object Operate(IWebCrawler webCrawler, object input);
     }
 }

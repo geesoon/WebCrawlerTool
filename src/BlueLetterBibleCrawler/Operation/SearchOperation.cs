@@ -2,11 +2,10 @@ using Bible.Data;
 using EnsureThat;
 using OpenQA.Selenium;
 using WebCrawler.Core.Interface;
-using WebCrawler.Core.Service;
 
 namespace BlueLetterBibleCrawler.Operation
 {
-    public sealed class SearchOperation : WebOperation<List<BibleVerse>, string>
+    public sealed class SearchOperation : IWebOperation
     {
         private readonly string searchUrl = "https://www.blueletterbible.org/search/search.cfm";
         private readonly By By = By.CssSelector(".scriptureText");
@@ -21,7 +20,7 @@ namespace BlueLetterBibleCrawler.Operation
             this.bibleTranslation = EnsureArg.IsNotNullOrWhiteSpace(translation, nameof(translation));
         }
 
-        protected override List<BibleVerse> Operate(IWebCrawler webCrawler, string context)
+        public object Operate(IWebCrawler webCrawler, object context)
         {
             var url = $"{this.searchUrl}?Criteria={this.criteria}&t={this.bibleTranslation}";
             webCrawler.BrowseUrl(url);
@@ -36,7 +35,7 @@ namespace BlueLetterBibleCrawler.Operation
                 bibleVerses = bibleVerses.Append(bibleVerse);
             }
 
-            return [.. bibleVerses];
+            return bibleVerses.ToList();
 
             static string ExtractReferenceFromElement(IWebElement element)
             {

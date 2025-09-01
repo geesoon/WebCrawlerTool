@@ -5,8 +5,8 @@ namespace WebCrawler.Core.Interface
     /// </summary>
     public interface IWebOperationPipeline
     {
-        public void AddOperation(IOperation operation);
-        public void RemoveOperation(IOperation operation);
-        public IEnumerable<object> Execute();
+        public void AddOperation(IWebOperation webOperation);
+        public void RemoveOperation(IWebOperation webOperation);
+        public List<object> Execute();
     }
 }
