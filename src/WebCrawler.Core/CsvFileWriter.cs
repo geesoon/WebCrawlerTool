@@ -1,8 +1,7 @@
 using System.Globalization;
 using CsvHelper;
-using WebCrawler.Core.Interface;
 
-namespace WebCrawler.Core.Service
+namespace WebCrawler.Core
 {
     public sealed class CsvFileWriter : IFileWriter
     {

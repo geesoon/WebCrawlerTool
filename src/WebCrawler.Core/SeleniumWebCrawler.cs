@@ -1,9 +1,8 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using EnsureThat;
-using WebCrawler.Core.Interface;
 
-namespace WebCrawler.Core.Service
+namespace WebCrawler.Core
 {
     public sealed class SeleniumWebCrawler : IWebCrawler, IDisposable
     {

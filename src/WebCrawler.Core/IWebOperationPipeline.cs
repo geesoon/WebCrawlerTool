@@ -1,4 +1,4 @@
-namespace WebCrawler.Core.Interface
+namespace WebCrawler.Core
 {
     /// <summary>
     /// This IWebOperationPipeline responsible for chaining operations into a pipeline

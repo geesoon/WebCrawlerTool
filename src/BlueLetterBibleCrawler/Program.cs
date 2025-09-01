@@ -1,6 +1,6 @@
 ﻿using BlueLetterBibleCrawler.Operation;
 using OpenQA.Selenium.Chrome;
-using WebCrawler.Core.Service;
+using WebCrawler.Core;
 
 namespace BlueLetterBibleCrawler
 {
@@ -9,8 +9,8 @@ namespace BlueLetterBibleCrawler
         private static SeleniumWebCrawler CreateWebCrawler()
         {
             var chromeOptions = new ChromeOptions();
-            // chromeOptions.AddArgument("--headless");
-            // chromeOptions.AddArgument("--disable-gpu");
+            chromeOptions.AddArgument("--headless");
+            chromeOptions.AddArgument("--disable-gpu");
 
             var webDriver = new ChromeDriver(chromeOptions)
             {

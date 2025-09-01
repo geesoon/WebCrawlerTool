@@ -1,8 +1,7 @@
 using System.Collections.Concurrent;
 using EnsureThat;
-using WebCrawler.Core.Interface;
 
-namespace WebCrawler.Core.Service
+namespace WebCrawler.Core
 {
     public sealed class WebOperationPipeline : IWebOperationPipeline
     {

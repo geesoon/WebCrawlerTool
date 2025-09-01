@@ -1,4 +1,4 @@
-namespace WebCrawler.Core.Interface
+namespace WebCrawler.Core
 {
     /// <summary>
     /// Chaining operation pipeline across multiple web site and aggregate the results.

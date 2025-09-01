@@ -1,7 +1,7 @@
 using Bible.Data;
 using EnsureThat;
 using OpenQA.Selenium;
-using WebCrawler.Core.Interface;
+using WebCrawler.Core;
 
 namespace BlueLetterBibleCrawler.Operation
 {

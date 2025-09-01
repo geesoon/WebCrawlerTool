@@ -1,4 +1,4 @@
-namespace WebCrawler.Core.Interface
+namespace WebCrawler.Core
 {
     public interface IWebOperation
     {
