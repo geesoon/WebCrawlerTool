@@ -7,26 +7,11 @@ namespace BlueLetterBibleCrawler
 {
     public static class Program
     {
-        public static void Main(string[] args)
-        {
-            var webCrawler = CreateWebCrawler();
-            var operationPipeline = new WebOperationPipeline(webCrawler);
-            operationPipeline.AddOperation(new SearchOperation("Love", BibleTranslation.KJV));
-
-            var fileName = "blb_concordance_love";
-            _ = new WorkFlow()
-                .AddPipeline(operationPipeline)
-                .Execute()
-                .OutputResults(new JsonFileWriter(), fileName + "json")
-
-            webCrawler.Dispose();
-        }
-
         private static SeleniumWebCrawler CreateWebCrawler()
         {
             var chromeOptions = new ChromeOptions();
-            chromeOptions.AddArgument("--headless");
-            chromeOptions.AddArgument("--disable-gpu");
+            // chromeOptions.AddArgument("--headless");
+            // chromeOptions.AddArgument("--disable-gpu");
 
             var webDriver = new ChromeDriver(chromeOptions)
             {
@@ -34,6 +19,20 @@ namespace BlueLetterBibleCrawler
             };
 
             return new SeleniumWebCrawler(webDriver);
+        }
+
+        public static async Task Main(string[] args)
+        {
+            var webCrawler = CreateWebCrawler();
+            var operationPipeline = new WebOperationPipeline(webCrawler);
+            operationPipeline.AddOperation(new SearchOperation("Love", BibleTranslation.KJV));
+
+            var workflow = new WorkFlow()
+                .AddPipeline(operationPipeline)
+                .Execute();
+
+            await workflow.OutputResultsAsync(new JsonFileWriter(), "blb_concordance_love.json");
+            webCrawler.Dispose();
         }
     }
 }

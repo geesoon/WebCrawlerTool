@@ -14,6 +14,7 @@ namespace WebCrawler.Core.Interface
         /// <returns>A list of read only IWebElement</returns> 
         /// <summary>
         public IReadOnlyList<IWebElement> FindElements(By by);
+
         public void BrowseUrl(string Url);
     }
 }
