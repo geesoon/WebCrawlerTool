@@ -38,12 +38,23 @@ namespace WebCrawler.Core
             return this;
         }
 
-        public async Task<IWorkFlow> OutputResultsAsync(IFileWriter fileWriter, string fileName)
+        public async Task<IWorkFlow> OutputResultsAsync(
+            IFileWriter fileWriter,
+            string searchTerm,
+            string translation,
+            string fileName)
         {
             var allResults = this.ParseOutput();
             fileName = fileName != null ? $"./Outputs/{fileName}" : $"./Outputs/{GetType().Name}_result.json";
 
-            await fileWriter.WriteToFileAsync(fileName, allResults).ConfigureAwait(false);
+            var final = new
+            {
+                SearchTerm = searchTerm,
+                Translation = translation,
+                Results = allResults,
+            };
+
+            await fileWriter.WriteToFileAsync(fileName, final).ConfigureAwait(false);
             return this;
         }
 
