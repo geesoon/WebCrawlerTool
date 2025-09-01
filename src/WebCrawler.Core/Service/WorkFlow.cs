@@ -48,11 +48,11 @@ namespace WebCrawler.Core.Service
 
             if (fileName != null)
             {
-                fileWriter.WriteToFile($"./Outputs/{fileName}", allResults);
+                fileWriter.WriteToFile($"./Outputs/{fileName}", [allResults]);
             }
             else
             {
-                fileWriter.WriteToFile($"./Outputs/{GetType().Name}_result.json", allResults);
+                fileWriter.WriteToFile($"./Outputs/{GetType().Name}_result.json", [allResults]);
             }
             return this;
         }

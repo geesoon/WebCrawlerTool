@@ -17,7 +17,7 @@ namespace BlueLetterBibleCrawler
             _ = new WorkFlow()
                 .AddPipeline(operationPipeline)
                 .Execute()
-                .OutputResults(new JsonFileWriter(), fileName + "json")
+                .OutputResults(new JsonFileWriter(), fileName + "json");
 
             webCrawler.Dispose();
         }

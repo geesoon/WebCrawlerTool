@@ -6,7 +6,7 @@ namespace WebCrawler.Core.Service
 {
     public sealed class JsonFileWriter : IFileWriter
     {
-        public void WriteToFile(string path, object data)
+        public void WriteToFile(string path, IEnumerable<object> data)
         {
             var directory = Path.GetDirectoryName(path);
             if (!Directory.Exists(directory))
