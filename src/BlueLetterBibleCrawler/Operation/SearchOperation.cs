@@ -23,7 +23,7 @@ namespace BlueLetterBibleCrawler.Operation
         public object Operate(IWebCrawler webCrawler, object context)
         {
             var url = $"{this.searchUrl}?Criteria={this.criteria}&t={this.bibleTranslation}";
-            webCrawler.BrowseUrl(url);
+            webCrawler.BrowseUrlAndWaitForElement(url, By);
             var allSearchResults = webCrawler.FindElements(By);
 
             IEnumerable<BibleVerse> bibleVerses = [];
