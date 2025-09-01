@@ -1,5 +1,6 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
 using EnsureThat;
 
 namespace WebCrawler.Core
@@ -33,11 +34,8 @@ namespace WebCrawler.Core
             return this.webDriver.FindElements(by);
         }
 
-        /// <summary>
-        /// Navigates to a URL and optionally waits for a condition.
-        /// </summary>
-        /// <param name="url">The target URL.</param>
-        public void BrowseUrl(string url)
+        public void BrowseUrl(
+            string url, Func<IWebDriver, IWebElement>? waitCondition = null)
         {
             EnsureArg.IsNotNullOrWhiteSpace(url, nameof(url));
             this.webDriver.Url = url;
@@ -45,6 +43,17 @@ namespace WebCrawler.Core
             // Always wait until document.readyState == complete
             this.defaultWait.Until(driver =>
                 ((IJavaScriptExecutor)driver).ExecuteScript("return document.readyState").Equals("complete"));
+
+            // If caller wants to wait for something specific (like an element)
+            if (waitCondition != null)
+            {
+                this.defaultWait.Until(waitCondition);
+            }
+        }
+
+        public void BrowseUrlAndWaitForElement(string url, By locator)
+        {
+            this.BrowseUrl(url, ExpectedConditions.ElementExists(locator));
         }
     }
 }

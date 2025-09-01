@@ -41,12 +41,12 @@ namespace Bible.Data
                 bookPart.Replace(" ", "");
                 if (!Enum.TryParse(bookPart, true, out BibleBooks book))
                 {
-                    book = BibleBooksExtensions.GetEnumFromAbbreviation(bookPart);
+                    book = bookPart.GetEnumFromAbbreviation();
                 }
 
                 try
                 {
-                    this.Book = BibleBooksExtensions.GetEnumFromAbbreviation(book.ToString());
+                    this.Book = book.ToString().GetEnumFromAbbreviation();
                 }
                 catch (ArgumentException)
                 {

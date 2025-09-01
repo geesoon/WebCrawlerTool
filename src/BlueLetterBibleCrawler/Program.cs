@@ -24,9 +24,9 @@ namespace BlueLetterBibleCrawler
         {
             var webCrawler = CreateWebCrawler();
             var operationPipeline = new WebOperationPipeline(webCrawler);
-            operationPipeline.AddOperation(new SearchOperation("love", "ESV"));
+            // operationPipeline.AddOperation(new SearchOperation("love", "ESV"));
             operationPipeline.AddOperation(new SearchOperation("soldier", "ESV"));
-            operationPipeline.AddOperation(new SearchOperation("soldier of God", "ESV"));
+            // operationPipeline.AddOperation(new SearchOperation("soldier of God", "ESV"));
             operationPipeline.AddOperation(new SearchOperation("confidence", "ESV"));
 
             var workflow = new WorkFlow()
