@@ -8,6 +8,10 @@ namespace WebCrawler.Core
         public IWorkFlow AddPipeline(IWebOperationPipeline pipeline);
         public IWorkFlow RemovePipeline(IWebOperationPipeline pipeline);
         public IWorkFlow Execute();
-        public Task<IWorkFlow> OutputResultsAsync(IFileWriter fileWriter, string fileName);
+        public Task<IWorkFlow> OutputResultsAsync(
+            IFileWriter fileWriter,
+            string searchTerm,
+            string translation,
+            string fileName);
     }
 }

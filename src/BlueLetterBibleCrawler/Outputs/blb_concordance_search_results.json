@@ -1,0 +1,80 @@
+{
+  "SearchTerm": "soldier",
+  "Translation": "esv",
+  "Results": {
+    "WebOperationPipeline": [
+      [
+        {
+          "Reference": "FirstKings 20:39",
+          "Book": "FirstKings",
+          "Chapter": 20,
+          "Verse": 39,
+          "Text": "And as the king passed, he cried to the king and said, \u201CYour servant went out into the midst of the battle, and behold, a soldier turned and brought a man to me and said, \u2018Guard this man; if by any means he is missing, your life shall be for his life, or else you shall pay a talent[fn] of silver.\u0027"
+        },
+        {
+          "Reference": "Isaiah 3:2",
+          "Book": "Isaiah",
+          "Chapter": 3,
+          "Verse": 2,
+          "Text": "the mighty man and the soldier,\nthe judge and the prophet,\nthe diviner and the elder,"
+        },
+        {
+          "Reference": "John 19:23",
+          "Book": "John",
+          "Chapter": 19,
+          "Verse": 23,
+          "Text": "When the soldiers had crucified Jesus, they took his garments and divided them into four parts, one part for each soldier; also his tunic.[fn] But the tunic was seamless, woven in one piece from top to bottom,"
+        },
+        {
+          "Reference": "Acts 10:7",
+          "Book": "Acts",
+          "Chapter": 10,
+          "Verse": 7,
+          "Text": "When the angel who spoke to him had departed, he called two of his servants and a devout soldier from among those who attended him,"
+        },
+        {
+          "Reference": "Acts 28:16",
+          "Book": "Acts",
+          "Chapter": 28,
+          "Verse": 16,
+          "Text": "And when we came into Rome, Paul was allowed to stay by himself, with the soldier who guarded him."
+        },
+        {
+          "Reference": "FirstCorinthians 9:7",
+          "Book": "FirstCorinthians",
+          "Chapter": 9,
+          "Verse": 7,
+          "Text": "Who serves as a soldier at his own expense? Who plants a vineyard without eating any of its fruit? Or who tends a flock without getting some of the milk?"
+        },
+        {
+          "Reference": "Philippians 2:25",
+          "Book": "Philippians",
+          "Chapter": 2,
+          "Verse": 25,
+          "Text": "I have thought it necessary to send to you Epaphroditus my brother and fellow worker and fellow soldier, and your messenger and minister to my need,"
+        },
+        {
+          "Reference": "SecondTimothy 2:3",
+          "Book": "SecondTimothy",
+          "Chapter": 2,
+          "Verse": 3,
+          "Text": "Share in suffering as a good soldier of Christ Jesus."
+        },
+        {
+          "Reference": "SecondTimothy 2:4",
+          "Book": "SecondTimothy",
+          "Chapter": 2,
+          "Verse": 4,
+          "Text": "No soldier gets entangled in civilian pursuits, since his aim is to please the one who enlisted him."
+        },
+        {
+          "Reference": "Philemon 1:2",
+          "Book": "Philemon",
+          "Chapter": 1,
+          "Verse": 2,
+          "Text": "and Apphia our sister and Archippus our fellow soldier, and the church in your house:"
+        }
+      ]
+    ]
+  }
+}
