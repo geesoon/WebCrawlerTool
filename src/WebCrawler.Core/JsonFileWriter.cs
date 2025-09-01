@@ -1,12 +1,11 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using WebCrawler.Core.Interface;
 
-namespace WebCrawler.Core.Service
+namespace WebCrawler.Core
 {
     public sealed class JsonFileWriter : IFileWriter
     {
-        private readonly JsonSerializerOptions _jsonSerializerOptions = new JsonSerializerOptions
+        private readonly JsonSerializerOptions _jsonSerializerOptions = new()
         {
             Converters =
             {

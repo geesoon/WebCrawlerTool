@@ -1,29 +1,29 @@
 using Bible.Data;
 using EnsureThat;
 using OpenQA.Selenium;
-using WebCrawler.Core.Interface;
-using WebCrawler.Core.Service;
+using WebCrawler.Core;
 
 namespace BlueLetterBibleCrawler.Operation
 {
-    public sealed class SearchOperation : WebOperationBase<List<BibleVerse>, string>
+    public sealed class SearchOperation : IWebOperation
     {
-        private readonly string SearchUrl = "https://www.blueletterbible.org/search/search.cfm";
+        private readonly string searchUrl = "https://www.blueletterbible.org/search/search.cfm";
         private readonly By By = By.CssSelector(".scriptureText");
-        private readonly string Criteria;
-        private readonly BibleTranslation Translation;
+        private readonly string criteria;
+        private readonly string bibleTranslation;
 
         public SearchOperation(
             string criteria,
-            BibleTranslation translation)
+            string translation)
         {
-            this.Criteria = EnsureArg.IsNotNull(criteria, nameof(criteria));
-            this.Translation = translation;
+            this.criteria = EnsureArg.IsNotNullOrWhiteSpace(criteria, nameof(criteria));
+            this.bibleTranslation = EnsureArg.IsNotNullOrWhiteSpace(translation, nameof(translation));
         }
 
-        protected override List<BibleVerse> Operate(IWebCrawler webCrawler, string context)
+        public object Operate(IWebCrawler webCrawler, object context)
         {
-            webCrawler.BrowseUrl($"{SearchUrl}?Criteria={Criteria}&t={Translation}");
+            var url = $"{this.searchUrl}?Criteria={this.criteria}&t={this.bibleTranslation}";
+            webCrawler.BrowseUrl(url);
             var allSearchResults = webCrawler.FindElements(By);
 
             IEnumerable<BibleVerse> bibleVerses = [];
@@ -35,7 +35,7 @@ namespace BlueLetterBibleCrawler.Operation
                 bibleVerses = bibleVerses.Append(bibleVerse);
             }
 
-            return [.. bibleVerses];
+            return bibleVerses.ToList();
 
             static string ExtractReferenceFromElement(IWebElement element)
             {

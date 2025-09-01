@@ -53,6 +53,26 @@ namespace Bible.Data
             { BibleBooks.Acts, (28, new int[] { 26, 47, 26, 37, 42, 15, 60, 40, 43, 48, 30, 25, 52, 28, 41, 40, 34, 28, 41, 38, 40, 30, 35, 27, 27, 32, 44, 31 }) },
             { BibleBooks.Romans, (16, new int[] { 32, 29, 31, 25, 21, 23, 25, 39, 33, 21, 36, 21, 14, 23, 33, 27 }) },
             { BibleBooks.FirstCorinthians, (16, new int[] { 31, 16, 23, 21, 13, 20, 40, 13, 27, 33, 34, 31, 13, 40, 58 }) },
-    };
+            { BibleBooks.SecondCorinthians, (13, new int[] { 24, 17, 18, 18, 21, 18, 16, 24, 15, 18, 33, 21, 14 }) },
+            { BibleBooks.Galatians, (6, new int[] { 24, 21, 29, 31, 26, 18 }) },
+            { BibleBooks.Ephesians, (6, new int[] { 23, 22, 21, 32, 33, 24 }) },
+            { BibleBooks.Philippians, (4, new int[] { 30, 30, 21, 23 }) },
+            { BibleBooks.Colossians, (4, new int[] { 29, 23, 25, 18 }) },
+            { BibleBooks.FirstThessalonians, (5, new int[] { 10, 20, 13, 18, 28 }) },
+            { BibleBooks.SecondThessalonians, (3, new int[] { 12, 17, 18 }) },
+            { BibleBooks.FirstTimothy, (6, new int[] { 20, 15, 16, 16, 25, 21 }) },
+            { BibleBooks.SecondTimothy, (4, new int[] { 18, 26, 17, 22 }) },
+            { BibleBooks.Titus, (3, new int[] { 16, 15, 15 }) },
+            { BibleBooks.Philemon, (1, new int[] { 25 }) },
+            { BibleBooks.Hebrews, (13, new int[] { 14, 18, 19, 16, 14, 20, 28, 13, 28, 39, 40, 29, 25 }) },
+            { BibleBooks.James, (5, new int[] { 27, 26, 18, 17, 20 }) },
+            { BibleBooks.FirstPeter, (5, new int[] { 25, 25, 22, 19, 14 }) },
+            { BibleBooks.SecondPeter, (3, new int[] { 21, 22, 18 }) },
+            { BibleBooks.FirstJohn, (5, new int[] { 10, 29, 24, 21, 21 }) },
+            { BibleBooks.SecondJohn, (1, new int[] { 13 }) },
+            { BibleBooks.ThirdJohn, (1, new int[] { 14 }) },
+            { BibleBooks.Jude, (1, new int[] { 25 }) },
+            { BibleBooks.Revelation, (22, new int [] { 20, 29, 22, 11, 14, 17, 17, 13, 21, 11, 19, 17, 18, 20, 8, 21, 18, 24, 21, 15, 27, 21 }) },
+        };
     }
 }

@@ -1,6 +1,6 @@
 using OpenQA.Selenium;
 
-namespace WebCrawler.Core.Interface
+namespace WebCrawler.Core
 {
     /// <summary>
     /// An abstraction of web crawler

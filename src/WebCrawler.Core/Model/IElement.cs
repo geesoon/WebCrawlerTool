@@ -1,4 +1,4 @@
-namespace WebCrawler.Core.Interface
+namespace WebCrawler.Core.Model
 {
     /// <summary>
     /// An abstraction of web element

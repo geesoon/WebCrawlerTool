@@ -205,26 +205,45 @@ namespace Bible.Data
             {"Luke", BibleBooks.Luke},
             {"John", BibleBooks.John},
             {"Acts", BibleBooks.Acts},
+            {"Act", BibleBooks.Acts},
             {"Rom", BibleBooks.Romans},
+            {"1Co", BibleBooks.FirstCorinthians},
             {"1Cor", BibleBooks.FirstCorinthians},
+            {"2Co", BibleBooks.SecondCorinthians},
             {"2Cor", BibleBooks.SecondCorinthians},
-            {"Gal", BibleBooks.Galatians},
+
+            { "Gal", BibleBooks.Galatians},
             {"Eph", BibleBooks.Ephesians},
             {"Phil", BibleBooks.Philippians},
-            {"Col", BibleBooks.Colossians},
+            {"Phl", BibleBooks.Philippians},
+
+            { "Col", BibleBooks.Colossians},
             {"1Thess", BibleBooks.FirstThessalonians},
-            {"2Thess", BibleBooks.SecondThessalonians},
-            {"1Tim", BibleBooks.FirstTimothy},
-            {"2Tim", BibleBooks.SecondTimothy},
-            {"Titus", BibleBooks.Titus},
+            {"1Th", BibleBooks.FirstThessalonians},
+
+            { "2Thess", BibleBooks.SecondThessalonians},
+            {"2Th", BibleBooks.SecondThessalonians},
+
+            { "1Tim", BibleBooks.FirstTimothy},
+            { "1Ti", BibleBooks.FirstTimothy},
+
+            { "2Tim", BibleBooks.SecondTimothy},
+            { "2Ti", BibleBooks.SecondTimothy},
+
+            { "Titus", BibleBooks.Titus},
             {"Phm", BibleBooks.Philemon},
-            {"Heb", BibleBooks.Hebrews},
+
+            { "Heb", BibleBooks.Hebrews},
             {"Jas", BibleBooks.James},
             {"1Pet", BibleBooks.FirstPeter},
             {"2Pet", BibleBooks.SecondPeter},
             {"1John", BibleBooks.FirstJohn},
-            {"2John", BibleBooks.SecondJohn},
-            {"3John", BibleBooks.ThirdJohn},
+            {"1Jo", BibleBooks.FirstJohn},
+
+            { "2John", BibleBooks.SecondJohn},
+            { "2Jo", BibleBooks.SecondJohn},
+
+            { "3John", BibleBooks.ThirdJohn},
             {"Jude", BibleBooks.Jude},
             {"Rev", BibleBooks.Revelation}
         };
